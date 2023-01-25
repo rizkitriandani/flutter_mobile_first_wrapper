@@ -3,7 +3,7 @@ description: Wanted to show your awesome mobile app to other without letting the
 version: 0.1.2
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.18.5 <3.0.0'
 
 dependencies:
   flutter:

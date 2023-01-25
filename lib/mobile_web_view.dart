@@ -7,11 +7,11 @@ import 'src/mobile_frame.dart';
 
 class MobileWebView extends StatelessWidget {
   const MobileWebView({
-    Key key,
-    @required this.child,
+    Key? key,
+    required this.child,
     this.content = const SizedBox.expand(),
     this.statusBarIconColor = Colors.black87,
-    this.backgroundColor,
+    required this.backgroundColor,
   }) : super(key: key);
 
   /// It is your main app that will show up under the mobile frame
