@@ -12,6 +12,7 @@ class MobileWebView extends StatelessWidget {
     this.content = const SizedBox.expand(),
     this.statusBarIconColor = Colors.black87,
     required this.backgroundColor,
+    required this.childContext,
   }) : super(key: key);
 
   /// It is your main app that will show up under the mobile frame
@@ -32,9 +33,12 @@ class MobileWebView extends StatelessWidget {
   ///
   /// [default is color of MaterialType.canvas]
   final Color backgroundColor;
+
+  final BuildContext childContext;
+
   @override
   Widget build(BuildContext context) {
-    if (kIsWeb && MediaQuery.of(context).size.width > 600)
+    if (kIsWeb && MediaQuery.of(childContext).size.width > 600)
       return Material(
         color: backgroundColor,
         child: Row(
